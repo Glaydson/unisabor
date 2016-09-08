@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta	charset="utf-8">
+  <meta	http-equiv="X-UA-Compatible"	content="IE=edge">
+  <meta	name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ristorante Con Fusion</title>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap-social.css" rel="stylesheet">
+  <link href="css/mystyles.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="img/logo.png" height=30 width=41></a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"
+                 aria-hidden="true"></span> Home</a></li>
+            <li><a href="sobre.html"><span class="glyphicon glyphicon-info-sign"
+                 aria-hidden="true"></span> Sobre</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                 role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"></span>
+                 Menu <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Entradas</a></li>
+                    <li><a href="#">Pratos Principais</a></li>
+                    <li><a href="#">Sobremesas</a></li>
+                    <li><a href="#">Bebidas</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                   role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"></span>
+                    Manter Menu <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Entradas</a></li>
+                    <li><a href="manterPratosPrincipais.html">Pratos Principais</a></li>
+                    <li><a href="#">Sobremesas</a></li>
+                    <li><a href="#">Bebidas</a></li>
+                </ul>
+            </li>
+            <li><a href="contactus.html"><i class="fa fa-envelope-o"></i> Comentários</a></li>
+        </ul>
+        <!-- Link para abrir o modal de login -->
+        <ul class="nav navbar-nav navbar-right">
+            <li><a id="loginButton">
+              <span class="glyphicon glyphicon-log-in"></span> Login</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Modal para o Login -->
+  <div id="loginModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    <!-- Conteúdo do modal-->
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Login </h4>
+        </div>
+        <div class="modal-body">
+         <form class="form-inline">
+              <div class="form-group">
+                  <label class="sr-only" for="email">Endereço de e-mail</label>
+                  <input type="email" class="form-control input-sm" id="email" placeholder="E-mail">
+              </div>
+              <div class="form-group">
+                  <label class="sr-only" for="password">Senha</label>
+                  <input type="password" class="form-control input-sm" id="password" placeholder="Senha">
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox"> Lembrar-me</label>
+              </div>
+              <button type="submit" class="btn btn-info btn-sm">Logar</button>
+              <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancelar</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </div>
+
+   <div class="container">
+
+       <h2>Manutenção do Menu</h2>
+
+      <table class="table table-bordered table-condensed table-hover table-striped" style="margin: 0px !important">
+          <tbody>
+          <tr class="gridster-drag">
+              <th class="info text-center" colspan="4">
+                  Entradas
+
+                  <a class="close" style="font-size: small; margin-left: 10px" title="Fechar"
+                     href="incluirResponsavel(recurso)">
+                      <i class="glyphicon glyphicon-plus"></i>
+                  </a>
+              </th>
+          </tr>
+          </tbody>
+      </table>
+      <table class="table table-bordered table-condensed table-hover table-striped"
+             style="margin: 0px !important; border-top-width: 0;"
+             tabela="opcoes">
+          <thead>
+              <th style="border-bottom-width: 0.5px">Nome</th>
+              <th style="border-bottom-width: 0.5px" align="center">Preço</th>
+              <th style="border-bottom-width: 0.5px" align="center">Ações</th>
+          </thead>
+          <tbody>
+              <tr>
+                  <td style="width: 60%">
+                      <a href="detalharPrato">Bife a Cavalo</a>
+                  </td>
+                  <td style="width: 30%" align="center">R$ 25,00</td>
+                  <td style="width: 10%" align="center">
+                      <button type="button" href="alterarPrato" class="btn btn-xs btn-default"
+                              title="Alterar"><i class="fa fa-edit info"></i></button>
+                      <button type="button" href="excluirPrato" class="btn btn-xs btn-default"
+                              title="Excluir"><i class="fa fa-trash-o"></i></button>
+                  </td>
+              </tr>
+              <tr>
+                  <td style="width: 60%">
+                      <a href="detalharPrato">Filé com Fritas</a>
+                  </td>
+                  <td style="width: 30%" align="center">R$ 35,00</td>
+                  <td style="width: 10%" align="center">
+                      <button type="button" href="alterarPrato" class="btn btn-xs btn-default"
+                              title="Alterar"><i class="fa fa-edit info"></i></button>
+                      <button type="button" href="excluirPrato" class="btn btn-xs btn-default"
+                              title="Excluir"><i class="fa fa-trash-o"></i></button>
+                  </td>
+              </tr>
+              <tr>
+                  <td style="width: 60%">
+                      <a href="detalharPrato">Frango a Cubana</a>
+                  </td>
+                  <td style="width: 30%" align="center">R$ 20,00</td>
+                  <td style="width: 10%" align="center">
+                      <button type="button" href="alterarPrato" class="btn btn-xs btn-default"
+                              title="Alterar"><i class="fa fa-edit info"></i></button>
+                      <button type="button" href="excluirPrato" class="btn btn-xs btn-default"
+                              title="Excluir"><i class="fa fa-trash-o"></i></button>
+                  </td>
+              </tr>
+              <tr>
+                  <td style="width: 60%">
+                      <a href="detalharPrato">Lasanha</a>
+                  </td>
+                  <td style="width: 30%" align="center">R$ 15,00</td>
+                  <td style="width: 10%" align="center">
+                      <button type="button" href="alterarPrato" class="btn btn-xs btn-default"
+                              title="Alterar"><i class="fa fa-edit info"></i></button>
+                      <button type="button" href="excluirPrato" class="btn btn-xs btn-default"
+                              title="Excluir"><i class="fa fa-trash-o"></i></button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>  <!-- Container -->
+
+  <script	src="js/jquery.min.js">
+  </script>
+    <!--	Include	all	compiled	plugins	(below),	or	include	individual	files
+      as	needed	-->
+    <script	src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#mycarousel").carousel( { interval: 2000 } );
+                          $("#carousel-pause").click(function(){
+                $("#mycarousel").carousel('pause');
+            });
+                        $("#carousel-play").click(function(){
+                $("#mycarousel").carousel('cycle');
+            });
+            $("#reserveButton").click(function(){
+              $("#reserveModal").modal();
+            });
+            $("#loginButton").click(function(){
+              $("#loginModal").modal();
+            });
+        });
+    </script>
+</body>
+
+</html>
