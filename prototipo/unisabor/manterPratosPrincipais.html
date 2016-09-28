@@ -28,6 +28,8 @@
         </button>
         <a class="navbar-brand" href="#"><img src="img/logo.png" height=30 width=41></a>
       </div>
+
+      <!-- Barra de Navegação -->
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
             <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"
@@ -67,6 +69,8 @@
       </div>
     </div>
   </nav>
+
+
   <!-- Modal para o Login -->
   <div id="loginModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -96,6 +100,43 @@
     </div>
     </div>
   </div>
+  
+  <!-- Modal para Incluir um novo prato -->
+  <div id="novoItemModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    <!-- Conteúdo do modal-->
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Inclusão de Novo Item no Menu </h4>
+        </div>
+        <div class="modal-body" style="margin: 10px 10px">
+         <form class="form-horizontal" role="form">
+              <div class="form-group">
+                  <label for="titulo" class="control-label">Título</label>
+                  <input type="text" class="form-control" size="30" id="titulo" placeholder="Título">
+              </div>
+              <div class="form-group">
+                  <label class="control-label" for="descricao">Descrição</label>
+                  <textarea class="form-control" id="descricao" placeholder="Descrição" rows="4"></textarea>
+              </div>
+              <div class="form-group">
+                  <label for="preco" class="control-label">Preço</label>
+                  <input type="number" class="form-control" id="preco">
+              </div>
+              <div class="form-group">
+                <label for="foto">Carregar uma foto</label>
+                <input type="file" id="foto">
+                <p class="help-block">Clique para carregar uma foto do item.</p>
+              </div>
+              <button type="submit" class="btn btn-info btn-sm">Incluir</button>
+              <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancelar</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </div>
+
 
    <div class="container">
 
@@ -107,8 +148,8 @@
               <th class="info text-center" colspan="4">
                   Entradas
 
-                  <a class="close" style="font-size: small; margin-left: 10px" title="Fechar"
-                     href="incluirResponsavel(recurso)">
+                  <a class="close" style="font-size: small; margin-left: 10px" title="Novo"
+                     href="#" id="novoItemButton">
                       <i class="glyphicon glyphicon-plus"></i>
                   </a>
               </th>
@@ -181,6 +222,7 @@
     <!--	Include	all	compiled	plugins	(below),	or	include	individual	files
       as	needed	-->
     <script	src="js/bootstrap.min.js"></script>
+    <!-- Usa JQuery para acionar o carrosel e modais -->
     <script>
         $(document).ready(function(){
             $("#mycarousel").carousel( { interval: 2000 } );
@@ -195,6 +237,9 @@
             });
             $("#loginButton").click(function(){
               $("#loginModal").modal();
+            });
+            $("#novoItemButton").click(function(){
+              $("#novoItemModal").modal();
             });
         });
     </script>
