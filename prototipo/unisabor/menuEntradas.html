@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta	charset="utf-8">
+  <meta	http-equiv="X-UA-Compatible"	content="IE=edge">
+  <meta	name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restaurante UniSabor</title>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap-social.css" rel="stylesheet">
+  <link href="css/mystyles.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="img/logo.png" height=30 width=41></a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"
+                 aria-hidden="true"></span> Home</a></li>
+            <li><a href="sobre.html"><span class="glyphicon glyphicon-info-sign"
+                 aria-hidden="true"></span> Sobre</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                 role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"></span>
+                 Menu <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="menuEntradas.html">Entradas</a></li>
+                    <li><a href="#">Pratos Principais</a></li>
+                    <li><a href="#">Sobremesas</a></li>
+                    <li><a href="#">Bebidas</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                   role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"></span>
+                    Manter Menu <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Entradas</a></li>
+                    <li><a href="manterPratosPrincipais.html">Pratos Principais</a></li>
+                    <li><a href="#">Sobremesas</a></li>
+                    <li><a href="#">Bebidas</a></li>
+                </ul>
+            </li>
+            <li><a href="contactus.html"><i class="fa fa-envelope-o"></i> Comentários</a></li>
+        </ul>
+        <!-- Link para abrir o modal de login -->
+        <ul class="nav navbar-nav navbar-right">
+            <li><a id="loginButton">
+              <span class="glyphicon glyphicon-log-in"></span> Login</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Modal para o Login -->
+  <div id="loginModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    <!-- Conteúdo do modal-->
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Login </h4>
+        </div>
+        <div class="modal-body">
+         <form class="form-inline">
+              <div class="form-group">
+                  <label class="sr-only" for="email">Endereço de e-mail</label>
+                  <input type="email" class="form-control input-sm" id="email" placeholder="E-mail">
+              </div>
+              <div class="form-group">
+                  <label class="sr-only" for="password">Senha</label>
+                  <input type="password" class="form-control input-sm" id="password" placeholder="Senha">
+              </div>
+              <div class="checkbox">
+                  <label><input type="checkbox"> Lembrar-me</label>
+              </div>
+              <button type="submit" class="btn btn-info btn-sm">Logar</button>
+              <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancelar</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="container">
+        <div class="row row-content">
+            <div class="col-xs-12">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#menu" aria-controls="menu" role="tab" data-toggle="tab">Menu</a></li>
+                    <li role="presentation">
+                        <a href="#entradas" aria-controls="entradas" role="tab" data-toggle="tab">Entradas</a></li>
+                    <li role="presentation">
+                        <a href="#principais" aria-controls="principais" role="tab" data-toggle="tab">Pratos Principais</a></li>
+                    <li role="presentation">
+                        <a href="#sobremesas" aria-controls="sobremesas" role="tab" data-toggle="tab">Sobremesas</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <!-- Menu -->
+                  <div role="tabpanel" class="tab-pane fade in active" id="menu">
+                    <ul class="media-list">
+                        <li class="media">
+                            <div class="media-left media-middle">
+                                <a href="detalhePrato.html">
+                                    <img class="media-object img-thumbnail" src="img/pizza.png" alt="UniPizza">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h2 class="media-heading">UniPizza
+                                    <span class="label label-danger">Especial</span>
+                                    <span class="badge">R$45,00</span></h2>
+                                <p>Combinação especial de ingredientes nordestinos.</p>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="media-left media-middle">
+                                <a href="#">
+                                    <img class="media-object img-thumbnail" src="img/parmegiana.jpg" height="110" width="110" alt="Parmegiana">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h2 class="media-heading">Filé a Parmegiana
+                                    <span class="label label-danger">Hot</span>
+                                    <span class="badge">R$35,00</span></h2>
+                                <p>O melhor filé do nordeste com molho de tomate da casa.</p>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="media-left media-middle">
+                                <a href="#">
+                                    <img class="media-object img-thumbnail" src="img/donut.png" alt="Donut">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h2 class="media-heading">Donut
+                                    <span class="badge">R$6,50</span></h2>
+                                <p>Um donut diferente que você não esquecerá.</p>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="media-left media-middle">
+                                <a href="#">
+                                    <img class="media-object img-thumbnail" src="img/cheesecake.png" alt="CheeseCake">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h2 class="media-heading">CheeseCake
+                                    <span class="label label-danger">Novo</span>
+                                    <span class="badge">R$4,50</span></h2>
+                                <p>Uma combinação única de bolo com queijo do sertão.</p>
+                            </div>
+                        </li>
+                      </ul>
+                    </div>  <!-- Fim do Menu -->
+                    <!-- Entradas -->
+                    <div role="tabpanel" class="tab-pane fade" id="entradas">
+                      <ul class="media-list">
+                          <li class="media">
+                              <div class="media-left media-middle">
+                                  <a href="#">
+                                      <img class="media-object img-thumbnail" src="img/pizza.png" alt="Pizza">
+                                  </a>
+                              </div>
+                              <div class="media-body">
+                                  <h2 class="media-heading">UniPizza
+                                      <span class="label label-danger">Especial</span>
+                                      <span class="badge">R$45,00</span></h2>
+                                  <p>Combinação especial de ingredientes nordestinos.</p>
+                              </div>
+                          </li>
+                      </ul>
+                    </div>  <!-- Fim das Entradas -->
+                    <!-- Pratos Principais -->
+                    <div role="tabpanel" class="tab-pane fade" id="principais">
+                      <ul class="media-list">
+                          <li class="media">
+                              <div class="media-left media-middle">
+                                  <a href="#">
+                                      <img class="media-object img-thumbnail" src="img/parmegiana.jpg" width="110" height="110" alt="Filé a Parmegiana">
+                                  </a>
+                              </div>
+                              <div class="media-body">
+                                  <h2 class="media-heading">Filé a Parmegiana
+                                    <span class="label label-danger">Hot</span>
+                                    <span class="badge">R$35,00</span></h2>
+                                  <p>O melhor filé do nordeste com molho de tomate da casa.</p>
+                              </div>
+                          </li>
+                      </ul>
+                    </div>  <!-- Fim dos Pratos Principais -->
+                    <!-- Sobremesas -->
+                    <div role="tabpanel" class="tab-pane fade" id="sobremesas">
+                      <ul class="media-list">
+                          <li class="media">
+                            <div class="media-left media-middle">
+                                <a href="#">
+                                    <img class="media-object img-thumbnail" src="img/donut.png" alt="Donut">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h2 class="media-heading">Donut
+                                    <span class="badge">R$6,50</span></h2>
+                                <p>Um donut diferente que você não esquecerá.</p>
+                            </div>
+                          </li>
+                          <li class="media">
+                              <div class="media-left media-middle">
+                                  <a href="#">
+                                      <img class="media-object img-thumbnail" src="img/cheesecake.png" alt="Cheese Cake">
+                                  </a>
+                              </div>
+                              <div class="media-body">
+                                  <h2 class="media-heading">CheeseCake
+                                    <span class="label label-danger">Novo</span>
+                                    <span class="badge">R$4,50</span></h2>
+                                  <p>Uma combinação única de bolo com queijo do sertão.</p>
+                              </div>
+                          </li>
+                      </ul>
+                    </div>  <!-- Fim das Sobremesas -->
+                </div>  <!-- Fim dos panes -->
+            </div>
+        </div>
+    </div>  <!-- Fim do container de menu -->
+
+
+    <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <div class="row row-footer">
+        <div class="col-xs-5 col-xs-offset-1 col-sm-2 col-sm-offset-1">
+            <h5>Links</h5>
+            <ul class="list-unstyled">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Manter Menu</a></li>
+                <li><a href="#">Comentários</a></li>
+            </ul>
+        </div>
+        <div class="col-xs-6 col-sm-5">
+          <h5>Nosso endereço</h5>
+          <address>
+            Rua da Praia Bela, 121<br>
+            Praia de Iracema<br>
+            FORTALEZA<br>
+            <i class="fa fa-phone"></i>: +852 1234 5678<br>
+            <i class="fa fa-fax"></i>: +852 8765 4321<br>
+            <i class="fa fa-envelope"></i>:
+            <a href="mailto:confusion@food.net">unisabor@food.net</a>
+          </address>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="nav navbar-nav" style="padding: 40px 10px;">
+              <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+              <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+              <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+              <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+              <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+              <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+          </div>
+        </div>
+          <div class="col-xs-12">
+              <p style="padding:10px;"></p>
+              <p align=center>© Copyright 2016 Restaurante UniSabor</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+    <script	src="js/jquery.min.js">
+    </script>
+    <!--	Include	all	compiled	plugins	(below),	or	include	individual	files
+      as	needed	-->
+    <script	src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#mycarousel").carousel( { interval: 2000 } );
+                          $("#carousel-pause").click(function(){
+                $("#mycarousel").carousel('pause');
+            });
+                        $("#carousel-play").click(function(){
+                $("#mycarousel").carousel('cycle');
+            });
+            $("#reserveButton").click(function(){
+              $("#reserveModal").modal();
+            });
+            $("#loginButton").click(function(){
+              $("#loginModal").modal();
+            });
+        });
+    </script>
+</body>
+
+</html>

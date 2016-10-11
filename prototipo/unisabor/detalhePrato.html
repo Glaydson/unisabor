@@ -97,25 +97,121 @@
     </div>
   </div>
 
-  <header class="jumbotron">
+  <!-- Detalhes do prato e comentários -->
+  <div class="container">
+        <div class="row row-content">
+            <div class = "col-xs-12">
+                <h3>Detalhes do Prato</h3>
+            </div>
+            <!-- Dados do prato -->
+            <div class="col-xs-12">
+                <button class="btn btn-xs btn-primary pull-right" type="button">
+                    Voltar ao Menu
+                </button>
+                <div class="media">
+                <ul class="media-list">
+                    <li class="media">
+                        <div class="media-left media-middle">
+                            <a href="#">
+                                <img class="media-object img-thumbnail" src="img/pizza.png" width="110" height="110" alt="UniPizza">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h2 class="media-heading">UniPizza
+                                    <span class="label label-danger">Especial</span>
+                                    <span class="badge">R$45,00</span></h2>
+                                <p>Combinação especial de ingredientes nordestinos.</p>
+                        </div>
+                    </li>
+                </ul>
+                </div>
+            </div>  <!-- Fim dados do prato -->
 
-      <div class="container">
-          <div class="row row-header">
-              <div class="col-xs-12 col-sm-8">
-                  <h1>Restaurante UniSabor</h1>
-                  <p style="padding:40px;"></p>
-                  <p>Inspirados pela nossa rica culinária regional, unimos o melhor da cozinha internacional com o nosso toque genuinamente cearense!</p>
-              </div>
-              <div class="col-xs-12 col-sm-2">
-                  <p style="padding:20px;"></p>
-                  <img src="img/logo.png" class="img-responsive">
-              </div>
-          </div>
-      </div>
-  </header>
+            <!-- Comentários -->
+            <div class="col-xs-9 col-xs-offset-1">
+                <p>
+                    <span style="font-size: 130%">Avaliações dos clientes</span>
+                </p>
+                <div>
+                    <blockquote>
+                        <p>5 estrelas</p>
+                        <p>Prato delicioso!</p>
+                        <footer>Marcelo, 20/09/2016</footer>
+                    </blockquote>
+                </div>
+                <div>
+                    <blockquote>
+                        <p>4 estrelas</p>
+                        <p>Muito bom o sabor!</p>
+                        <footer>Ana, 02/09/2016</footer>
+                    </blockquote>
+                </div>
+                <div>
+                    <blockquote>
+                        <p>3 estrelas</p>
+                        <p>O molho pode ser melhorado!</p>
+                        <footer>Lucas, 20/08/2016</footer>
+                    </blockquote>
+                </div>
+            </div> <!-- Fim Comentários -->
 
- 
+            <div class="col-xs-12">
+              <button class="btn btn-xs btn-primary" type="button">
+                    Quero Avaliar!
+              </button>
+            </div>
 
+            <!-- Formulário de avaliação -->
+            <div class="col-xs-9 col-xs-offset-1">
+                 <form class="form-horizontal" name="commentForm">
+                    <div class="form-group">
+                        <label for="autor" class="col-sm-2 control-label">Seu Nome</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="autor" name="autor"
+                                   placeholder="Entre seu Nome" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Número de Estrelas</label>
+                        <div class="col-sm-10">
+                            <label class="radio-inline">
+                                <input type="radio" value="1"> 1
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" value="2"> 2
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" value="3"> 3
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" value="4"> 4
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" value="5"> 5
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group"> 
+                        <label for="comentario" class="col-sm-2 control-label">Seus comentários</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" rows="12"
+                                      id="comentario" name="comentario" required>
+                            </textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Submeter Avaliação
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div> <!-- Fim do formulário de avaliação -->
+        </div>  <!-- Fim da linha (row) -->
+    </div> <!-- Fim detalhes do prato e comentários -->
+
+
+    <!-- Rodapé -->
   <footer>
     <div class="container">
       <div class="row row-footer">
